@@ -13,7 +13,7 @@ function Hero() {
           websites built to convert and scale.
         </p>
         <div className="flex gap-10">
-          <button className="bg-(--accent) px-[20px] py-[10px] text-white">
+          <button className="bg-[#2563eb] px-[20px] py-[10px] text-white">
             Get Started
           </button>
           <button className="bg-black text-white px-[20px] py-[10px]">

@@ -11,7 +11,7 @@ function Cta() {
           you're just starting out or scaling up, we’ll turn your ideas into
           reality—fast.
         </p>
-        <button className="bg-(--background) px-[20px] py-[10px] rounded-full">
+        <button className="bg-white  px-[20px] py-[10px] rounded-full">
           Let's Get Started
         </button>
       </section>
