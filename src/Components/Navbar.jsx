@@ -2,9 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"; // Import faBars and faTimes
 
-function Navbar() {
+function Navbar({ scrollToSection, refs }) {
   const [isOpen, setIsOpen] = useState(false); // State to toggle the menu
   const toggleMenu = () => setIsOpen((prev) => !prev); // Toggle the state
+  const { heroRef, aboutRef, testimonialsRef, servicesRef } = refs;
 
   return (
     <nav className="w-full px-4 py-3 flex items-center justify-between shadow-md relative bg-white">
@@ -29,19 +30,59 @@ function Navbar() {
         <div
           className={`fixed top-10 right-0 h-full w-64 bg-white shadow-md p-6 transform transition-transform duration-300 z-40`}
         >
-          <a href="#" className="block py-3" onClick={() => setIsOpen(false)}>
+          <a
+            href="#"
+            className="block py-3"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(false);
+              scrollToSection(heroRef);
+            }}
+          >
             Home
           </a>
-          <a href="#" className="block py-3" onClick={() => setIsOpen(false)}>
+          <a
+            href="#"
+            className="block py-3"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(false);
+              scrollToSection(servicesRef);
+            }}
+          >
             Services
           </a>
-          <a href="#" className="block py-3" onClick={() => setIsOpen(false)}>
+          <a
+            href="#"
+            className="block py-3"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(false);
+              scrollToSection(aboutRef);
+            }}
+          >
             About
           </a>
-          <a href="#" className="block py-3" onClick={() => setIsOpen(false)}>
+          <a
+            href="#"
+            className="block py-3"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(false);
+              scrollToSection(testimonialsRef);
+            }}
+          >
             Testimonials
           </a>
-          <a href="#" className="block py-3" onClick={() => setIsOpen(false)}>
+          <a
+            href="#"
+            className="block py-3"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(false);
+              scrollToSection("contact");
+            }}
+          >
             Contact
           </a>
         </div>
