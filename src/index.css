@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9fafb;
+  --accent: #2563eb;
+  --text: #111827;
+  --secondary: #6b7280;
+}
+* {
+  font-family: "Inter";
+}
+h1,
+h2,
+h3 {
+  font-family: "Poppins";
+}
+.font-heading {
+  font-family: "Poppins";
+}
+body {
+  background-color: var(--background);
+}
+p,
+li,
+a {
+  font-family: "Inter";
+}
+#hero {
+  background: url("../assets/hero.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.custom-hover-shadow:hover {
+  box-shadow: 0 10px 20px var(--accent); /* #2563eb with some opacity */
+  transition: all 300ms ease;
+}
+
+button {
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  #hero {
+    padding: 5px;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 14px;
+  }
+}
